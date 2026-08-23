@@ -100,4 +100,4 @@ Para inspecionar os dados da simulação em tempo de execução:
 * **Visualizar imagem da câmera em tempo real:** Utilize o `rviz2` ajustando o *Fixed Frame* para `cam_link`.
 
 ---
-*Desenvolvido pelo IFSC para pesquisa e desenvolvimento em robótica autônoma e sistemas embarcados.*
+*Desenvolvido pela Equipe DroneIFSC para pesquisa e desenvolvimento em robótica autônoma e sistemas embarcados.*
