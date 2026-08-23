@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="prateleira">
+    <static>true</static>
+    <link name="estrutura">	
+    
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 0.3 3</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <!-- Coluna esquerda -->
+      <visual name="coluna_esquerda">
+        <pose>-1.5 0 1.5 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.3 3</size></box>
+        </geometry>
+        <material><ambient>0.6 0.3 0.1 1</ambient></material> <!-- Cor marrom -->
+      </visual>
+
+      <!-- Coluna direita -->
+      <visual name="coluna_direita">
+        <pose>1.5 0 1.5 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.3 3</size></box>
+        </geometry>
+        <material><ambient>0.6 0.3 0.1 1</ambient></material>
+      </visual>
+
+      <!-- Prateleiras -->
+      <visual name="prateleira1">
+        <pose>0 0 1 0 0 0</pose>
+        <geometry>
+          <box><size>3.0 0.3 0.03</size></box>
+        </geometry>
+        <material><ambient>0.7 0.4 0.2 1</ambient></material>
+      </visual>
+
+      <visual name="prateleira2">
+        <pose>0 0 1.5 0 0 0</pose>
+        <geometry>
+          <box><size>3.0 0.3 0.03</size></box>
+        </geometry>
+        <material><ambient>0.7 0.4 0.2 1</ambient></material>
+      </visual>
+
+      <visual name="prateleira3">
+        <pose>0 0 2.0 0 0 0</pose>
+        <geometry>
+          <box><size>3.0 0.3 0.03</size></box>
+        </geometry>
+        <material><ambient>0.7 0.4 0.2 1</ambient></material>
+      </visual>
+
+      <visual name="prateleira4">
+        <pose>0 0 2.5 0 0 0</pose>
+        <geometry>
+          <box><size>3.0 0.3 0.03</size></box>
+        </geometry>
+        <material><ambient>0.7 0.4 0.2 1</ambient></material>
+      </visual>
+
+      <visual name="prateleira5">
+        <pose>0 0 3 0 0 0</pose>
+        <geometry>
+          <box><size>3.0 0.3 0.03</size></box>
+        </geometry>
+        <material><ambient>0.7 0.4 0.2 1</ambient></material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

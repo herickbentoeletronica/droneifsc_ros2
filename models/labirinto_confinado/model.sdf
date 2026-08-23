@@ -1,0 +1,369 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="labirinto_confinado">
+    <static>true</static>
+
+    <link name="parede_frontal_inteira">
+      <pose>3.0 0 0.75 0 0 0</pose>
+      <collision name="col_parede_frontal_inteira"><geometry><box><size>6.0 0.05 1.5</size></box></geometry></collision>
+      <visual name="vis_parede_frontal_inteira">
+        <geometry><box><size>6.0 0.05 1.5</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_traseira_solida">
+      <pose>2.5 2.0 0.75 0 0 0</pose>
+      <collision name="col_parede_traseira_solida"><geometry><box><size>5.0 0.05 1.5</size></box></geometry></collision>
+      <visual name="vis_parede_traseira_solida">
+        <geometry><box><size>5.0 0.05 1.5</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_tras_janela_baixo">
+      <pose>5.5 2.0 0.3 0 0 0</pose>
+      <collision name="col_parede_tras_jan_baixo"><geometry><box><size>1.0 0.05 0.6</size></box></geometry></collision>
+      <visual name="vis_parede_tras_jan_baixo">
+        <geometry><box><size>1.0 0.05 0.6</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_tras_janela_cima">
+      <pose>5.5 2.0 1.45 0 0 0</pose>
+      <collision name="col_parede_tras_jan_cima"><geometry><box><size>1.0 0.05 0.1</size></box></geometry></collision>
+      <visual name="vis_parede_tras_jan_cima">
+        <geometry><box><size>1.0 0.05 0.1</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_tras_janela_pilar_esq">
+      <pose>5.05 2.0 1.0 0 0 0</pose>
+      <collision name="col_parede_tras_jan_pil_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_parede_tras_jan_pil_esq">
+        <geometry><box><size>0.1 0.05 0.8</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_tras_janela_pilar_dir">
+      <pose>5.95 2.0 1.0 0 0 0</pose>
+      <collision name="col_parede_tras_jan_pil_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_parede_tras_jan_pil_dir">
+        <geometry><box><size>0.1 0.05 0.8</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="parede_esq_frente">
+      <pose>0 0.5 0.75 0 0 0</pose>
+      <collision name="col_parede_esq_frente"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_parede_esq_frente"><geometry><box><size>0.05 1.0 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="parede_esq_tras_baixo">
+      <pose>0 1.5 0.3 0 0 0</pose>
+      <collision name="col_parede_esq_tras_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry></collision>
+      <visual name="vis_parede_esq_tras_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="parede_esq_tras_cima">
+      <pose>0 1.5 1.45 0 0 0</pose>
+      <collision name="col_parede_esq_tras_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry></collision>
+      <visual name="vis_parede_esq_tras_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="parede_esq_tras_lateral_esq">
+      <pose>0 1.05 1.0 0 0 0</pose>
+      <collision name="col_parede_esq_tras_lat_esq"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_parede_esq_tras_lat_esq"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="parede_esq_tras_lateral_dir">
+      <pose>0 1.95 1.0 0 0 0</pose>
+      <collision name="col_parede_esq_tras_lat_dir"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_parede_esq_tras_lat_dir"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="parede_direita_inteira">
+      <pose>6.0 1.0 0.75 0 0 0</pose>
+      <collision name="col_parede_direita_inteira"><geometry><box><size>0.05 2.0 1.5</size></box></geometry></collision>
+      <visual name="vis_parede_direita_inteira">
+        <geometry><box><size>0.05 2.0 1.5</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="int_sala_esq_horiz_pilar_esq">
+      <pose>0.05 1 0.4 0 0 0</pose>
+      <collision name="col_int_sala_esq_horiz_pil_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_sala_esq_horiz_pil_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_sala_esq_horiz_pilar_dir">
+      <pose>0.95 1 0.4 0 0 0</pose>
+      <collision name="col_int_sala_esq_horiz_pil_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_sala_esq_horiz_pil_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_sala_esq_horiz_viga">
+      <pose>0.5 1 1.15 0 0 0</pose>
+      <collision name="col_int_sala_esq_horiz_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry></collision>
+      <visual name="vis_int_sala_esq_horiz_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_sala_esq_vertical">
+      <pose>1.0 1.5 0.75 0 0 0</pose>
+      <collision name="col_int_sala_esq_vertical"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_int_sala_esq_vertical"><geometry><box><size>0.05 1.0 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X2">
+      <pose>2.0 0.5 0.75 0 0 0</pose>
+      <collision name="col_int_divisoria_X2"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X2"><geometry><box><size>0.05 1.0 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X3_vertical">
+      <pose>3.0 1.5 0.75 0 0 0</pose>
+      <collision name="col_int_divisoria_X3_vertical"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X3_vertical"><geometry><box><size>0.05 1.0 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X4">
+      <pose>4.0 0.5 0.75 0 0 0</pose>
+      <collision name="col_int_divisoria_X4"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X4"><geometry><box><size>0.05 1.0 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X4_topo_baixo">
+      <pose>4.0 1.5 0.3 0 0 0</pose>
+      <collision name="col_int_divisoria_X4_topo_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X4_topo_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X4_topo_cima">
+      <pose>4.0 1.5 1.45 0 0 0</pose>
+      <collision name="col_int_divisoria_X4_topo_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X4_topo_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X4_topo_pilar_frente">
+      <pose>4.0 1.05 1.0 0 0 0</pose>
+      <collision name="col_int_divisoria_X4_topo_pil_frente"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X4_topo_pil_frente"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_X4_topo_pilar_tras">
+      <pose>4.0 1.95 1.0 0 0 0</pose>
+      <collision name="col_int_divisoria_X4_topo_pil_tras"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_X4_topo_pil_tras"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_central_Y_baixo">
+      <pose>3.0 0.5 0.3 0 0 0</pose>
+      <collision name="col_int_divisoria_central_Y_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_central_Y_baixo"><geometry><box><size>0.05 1.0 0.6</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_central_Y_cima">
+      <pose>3.0 0.5 1.45 0 0 0</pose>
+      <collision name="col_int_divisoria_central_Y_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_central_Y_cima"><geometry><box><size>0.05 1.0 0.1</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_central_Y_pilar_frente">
+      <pose>3.0 0.05 1.0 0 0 0</pose>
+      <collision name="col_int_divisoria_central_Y_pil_frente"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_central_Y_pil_frente"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_divisoria_central_Y_pilar_tras">
+      <pose>3.0 0.95 1.0 0 0 0</pose>
+      <collision name="col_int_divisoria_central_Y_pil_tras"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_divisoria_central_Y_pil_tras"><geometry><box><size>0.05 0.1 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_esq_pilar_esq">
+      <pose>2.05 1 0.4 0 0 0</pose>
+      <collision name="col_int_central_esq_pilar_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_central_esq_pilar_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_esq_pilar_dir">
+      <pose>2.95 1 0.4 0 0 0</pose>
+      <collision name="col_int_central_esq_pilar_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_central_esq_pilar_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_esq_viga">
+      <pose>2.5 1 1.15 0 0 0</pose>
+      <collision name="col_int_central_esq_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry></collision>
+      <visual name="vis_int_central_esq_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_dir_pilar_esq">
+      <pose>3.05 1 0.4 0 0 0</pose>
+      <collision name="col_int_central_dir_pilar_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_central_dir_pilar_esq"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_dir_pilar_dir">
+      <pose>3.95 1 0.4 0 0 0</pose>
+      <collision name="col_int_central_dir_pilar_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry></collision>
+      <visual name="vis_int_central_dir_pilar_dir"><geometry><box><size>0.1 0.05 0.8</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_central_dir_viga">
+      <pose>3.5 1 1.15 0 0 0</pose>
+      <collision name="col_int_central_dir_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry></collision>
+      <visual name="vis_int_central_dir_viga"><geometry><box><size>1.0 0.05 0.7</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material></visual>
+    </link>
+
+    <link name="int_sala_dir_topo_solida">
+      <pose>5.0 1.5 0.75 0 0 0</pose>
+      <collision name="col_int_sala_dir_topo_solida"><geometry><box><size>0.05 1.0 1.5</size></box></geometry></collision>
+      <visual name="vis_int_sala_dir_topo_solida">
+        <geometry><box><size>0.05 1.0 1.5</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="int_sala_dir_baixo_pilar_frente">
+      <pose>5.0 0.05 0.4 0 0 0</pose>
+      <collision name="col_int_sala_dir_baixo_pil_frente"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_sala_dir_baixo_pil_frente">
+        <geometry><box><size>0.05 0.1 0.8</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="int_sala_dir_baixo_pilar_tras">
+      <pose>5.0 0.95 0.4 0 0 0</pose>
+      <collision name="col_int_sala_dir_baixo_pil_tras"><geometry><box><size>0.05 0.1 0.8</size></box></geometry></collision>
+      <visual name="vis_int_sala_dir_baixo_pil_tras">
+        <geometry><box><size>0.05 0.1 0.8</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="int_sala_dir_baixo_viga">
+      <pose>5.0 0.5 1.15 0 0 0</pose>
+      <collision name="col_int_sala_dir_baixo_viga"><geometry><box><size>0.05 1.0 0.7</size></box></geometry></collision>
+      <visual name="vis_int_sala_dir_baixo_viga">
+        <geometry><box><size>0.05 1.0 0.7</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <link name="teto_arena">
+      <pose>3.0 1.0 1.525 0 0 0</pose>
+      <collision name="col_teto"><geometry><box><size>6.0 2.0 0.05</size></box></geometry></collision>
+      <visual name="vis_teto">
+        <geometry><box><size>6.0 2.0 0.05</size></box></geometry>
+        <material><ambient>0.8 0.8 0.8 0.3</ambient><diffuse>0.8 0.8 0.8 0.3</diffuse></material>
+        <transparency>0.7</transparency> 
+      </visual>
+    </link>
+
+    <link name="qr_code_A">
+      <pose>0.026 0.5 0.8 0 0 0</pose>
+      <collision name="col_qr_A"><geometry><box><size>0.001 0.1 0.1</size></box></geometry></collision>
+      <visual name="vis_qr_A">
+        <geometry><box><size>0.001 0.1 0.1</size></box></geometry>
+        <material>
+          <script><uri>model://labirinto_confinado/materials/scripts</uri><uri>model://labirinto_confinado/materials/textures</uri><name>QRCode/A</name></script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="qr_code_B">
+      <pose>0.974 1.5 0.8 0 0 3.14159</pose>
+      <collision name="col_qr_B"><geometry><box><size>0.001 0.1 0.1</size></box></geometry></collision>
+      <visual name="vis_qr_B">
+        <geometry><box><size>0.001 0.1 0.1</size></box></geometry>
+        <material>
+          <script><uri>model://labirinto_confinado/materials/scripts</uri><uri>model://labirinto_confinado/materials/textures</uri><name>QRCode/B</name></script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="qr_code_C">
+      <pose>2.5 1.974 0.8 0 0 0</pose>
+      <collision name="col_qr_C"><geometry><box><size>0.1 0.001 0.1</size></box></geometry></collision>
+      <visual name="vis_qr_C">
+        <geometry><box><size>0.1 0.001 0.1</size></box></geometry>
+        <material>
+          <script><uri>model://labirinto_confinado/materials/scripts</uri><uri>model://labirinto_confinado/materials/textures</uri><name>QRCode/C</name></script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="qr_code_D">
+      <pose>3.026 1.5 0.8 0 0 0</pose>
+      <collision name="col_qr_D"><geometry><box><size>0.001 0.1 0.1</size></box></geometry></collision>
+      <visual name="vis_qr_D">
+        <geometry><box><size>0.001 0.1 0.1</size></box></geometry>
+        <material>
+          <script><uri>model://labirinto_confinado/materials/scripts</uri><uri>model://labirinto_confinado/materials/textures</uri><name>QRCode/D</name></script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="qr_code_E">
+      <pose>5.026 1.5 0.8 0 0 3.14159</pose>
+      <collision name="col_qr_E"><geometry><box><size>0.001 0.1 0.1</size></box></geometry></collision>
+      <visual name="vis_qr_E">
+        <geometry><box><size>0.001 0.1 0.1</size></box></geometry>
+        <material>
+          <script><uri>model://labirinto_confinado/materials/scripts</uri><uri>model://labirinto_confinado/materials/textures</uri><name>QRCode/E</name></script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="parede_base_preta">
+      <pose>3.0 0 0.75 0 0 1.57</pose>
+      <collision name="col_base_preta">
+        <geometry><box><size>0.05 10.0 1.5</size></box></geometry>
+      </collision>
+      <visual name="vis_base_preta">
+        <geometry><box><size>0.05 10.0 1.5</size></box></geometry>
+        <material>
+          <ambient>0.9 0.85 0.7 1</ambient>
+          <diffuse>0.9 0.85 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="parede_poster_cbr_x">
+      <pose>3.0 0 2.75 0 0 1.57</pose>
+      <collision name="col_poster_cbr_x">
+        <geometry><box><size>0.05 10.0 2.5</size></box></geometry>
+      </collision>
+      <visual name="vis_poster_cbr_x">
+        <geometry><box><size>0.05 10.0 2.5</size></box></geometry>
+        <material>
+          <script>
+            <uri>model://labirinto_confinado/materials/scripts</uri>
+            <uri>model://labirinto_confinado/materials/textures</uri>
+            <name>CBR/Poster</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="acrilico_direita">
+      <pose>8.0 5.0 2.0 0 0 0</pose> <collision name="col_acrilico_dir"><geometry><box><size>0.05 10.0 4.0</size></box></geometry></collision>
+      <visual name="vis_acrilico_dir">
+        <geometry><box><size>0.05 10.0 4.0</size></box></geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 0.3</ambient>
+          <diffuse>0.8 0.8 0.8 0.3</diffuse>
+        </material>
+        <transparency>0.7</transparency>
+      </visual>
+    </link>
+ </model>
+</sdf>

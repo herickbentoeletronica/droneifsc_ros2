@@ -1,0 +1,14 @@
+material BaseCentro
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture basepouso_pagina_1.jpg
+      }
+    }
+  }
+}
+

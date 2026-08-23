@@ -1,0 +1,17 @@
+# Ignorar cache e temporarios
+__pycache__/
+*.pyc
+*.swp
+*.save
+*~
+build/
+install/
+log/
+
+# Resíduos antigos
+mav.parm
+mav.tlog*
+eeprom.bin
+logs/
+terrain/
+.gazebo/

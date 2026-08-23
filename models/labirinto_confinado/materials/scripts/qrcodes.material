@@ -1,0 +1,18 @@
+material QRCode/A {
+  technique { pass { texture_unit { texture qrcode_A.png } } }
+}
+material QRCode/B {
+  technique { pass { texture_unit { texture qrcode_B.png } } }
+}
+material QRCode/C {
+  technique { pass { texture_unit { texture qrcode_C.png } } }
+}
+material QRCode/D {
+  technique { pass { texture_unit { texture qrcode_D.png } } }
+}
+material QRCode/E {
+  technique { pass { texture_unit { texture qrcode_E.png } } }
+}
+material CBR/Poster {
+  technique { pass { texture_unit { texture imagemcbr.png } } }
+}

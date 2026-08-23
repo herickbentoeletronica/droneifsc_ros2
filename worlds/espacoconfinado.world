@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="arena_espacoconfinado">
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="labirinto_fase4">
+      <include>
+        <uri>model://labirinto_confinado</uri>
+      </include>
+      <pose>0 0 0 0 0 0</pose>
+    </model>
+
+    <include>
+      <uri>model://base_takeoff</uri>
+      <pose>-1 1 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://droneIFSC</uri>
+      <pose>-1.0 1.0 0.7 0 0 0</pose>
+    </include>
+
+    <model name="base_pouso_final">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>3.5 4.5 0 0 0 0</pose>
+    </model>
+
+    <model name="base_pouso_solo_1">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>0 4.0 0 0 0 0</pose>
+    </model>
+
+    <model name="base_pouso_solo_2">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>6.0 3.5 0 0 0 0</pose>
+    </model>
+
+    <model name="base_pouso_aerea_1m">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>0 7 1.0 0 0 0</pose>
+    </model>
+
+    <model name="base_pouso_aerea_1.5m">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>4.0 7 1.5 0 0 0</pose>
+    </model>
+
+    <model name="base_pouso_aerea_15m">
+      <include>
+        <uri>model://base_pouso</uri>
+      </include>
+      <pose>3.5 1.0 1.5 0 0 0</pose>
+    </model>
+
+    <model name="suporte_1m">
+      <static>true</static>
+      <link name="base_solo">
+        <pose>0 7 0.025 0 0 0</pose>
+        <visual name="vis">
+          <geometry><box><size>1.0 1.0 0.05</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+      <link name="pilar">
+        <pose>0 7 0.525 0 0 0</pose>
+        <collision name="col"><geometry><box><size>0.4 0.4 0.95</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.4 0.4 0.95</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="suporte_1_5m">
+      <static>true</static>
+      <link name="base_solo">
+        <pose>4 7 0.025 0 0 0</pose>
+        <visual name="vis">
+          <geometry><box><size>1.0 1.0 0.05</size></box></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+      <link name="pilar">
+        <pose>4 7 0.775 0 0 0</pose>
+        <collision name="col"><geometry><box><size>0.4 0.4 1.45</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.4 0.4 1.45</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
