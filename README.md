@@ -24,17 +24,17 @@ Este ecossistema foi migrado para uma estrutura conteinerizada via Docker, garan
 ## Pré-requisitos
 * Sistema operacional compatível com Docker e WSL2.
 * Docker Desktop configurado com suporte a aplicações gráficas.
-* Ter criado uma pasta de workspace (ex: `~/ros2_ws/src`) no seu ambiente host.
+* Ter criado a estrutura de workspace correta no host (o repositório deve ser clonado dentro de `~/ros2_ws/src/droneifsc`).
 
 ---
 
 ## 1. Criação e Configuração do Ambiente (Docker)
 
-1. **Clone este repositório na sua workspace:**
+1. **Clone este repositório na pasta correta da sua workspace:**
 ```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-git clone https://github.com/herickbentoeletronica/droneifsc_gazebo_ros2.git
+mkdir -p ~/ros2_ws/src/droneifsc
+cd ~/ros2_ws/src/droneifsc
+git clone https://github.com/herickbentoeletronica/droneifsc_gazebo_ros2.git .
 ```
 
 2. **Crie e acesse o container Docker:**
