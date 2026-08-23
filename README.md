@@ -1,11 +1,11 @@
 # Arena Drone IFSC - ROS2 Humble & ArduPilot SITL
 
-Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, utilizando a arquitetura moderna do ROS2 Humble, Gazebo 11 com aceleração de hardware (GPU), e o piloto automático ArduPilot SITL.
+Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, utilizando a arquitetura moderna do ROS2 Humble, Gazebo 11 e o piloto automático ArduPilot SITL.
 
 ---
 
 ## Arquitetura do Projeto
-Este ecossistema foi migrado para uma estrutura conteinerizada via Docker (WSLg), garantindo portabilidade total e isolamento de dependências. O projeto divide-se em:
+Este ecossistema foi migrado para uma estrutura conteinerizada via Docker, garantindo portabilidade total e isolamento de dependências. O projeto divide-se em:
 * **Física e Mundo (Gazebo):** Simulação tridimensional do labirinto confinado e do drone com sensores de câmera.
 * **Cérebro de Voo (ArduPilot SITL & MAVProxy):** Controladora de voo virtual que processa a dinâmica do veículo e aceita comandos de navegação.
 * **Ponte de Comunicação (MAVROS):** Tradutor oficial que conecta o ecossistema ArduPilot ao ecossistema ROS2.
@@ -13,8 +13,8 @@ Este ecossistema foi migrado para uma estrutura conteinerizada via Docker (WSLg)
 ---
 
 ## Pré-requisitos
-* Windows 10/11 com WSL2 ativado.
-* Docker Desktop com suporte a aceleração gráfica (WSLg / NVIDIA CUDA).
+* Sistema operacional compatível com Docker e WSL2.
+* Docker Desktop configurado com suporte a aplicações gráficas.
 * ROS2 Humble Desktop & Gazebo 11 instalados no container.
 
 ---
@@ -28,7 +28,7 @@ Este ecossistema foi migrado para uma estrutura conteinerizada via Docker (WSLg)
 
 ## Como Executar o Projeto
 
-Para rodar a simulação completa com sucesso, você precisará abrir **três terminais independentes** no seu WSL, acessando o container em cada um deles (`docker exec -it arena_ros2_gpu bash`):
+Para rodar a simulação completa com sucesso, você precisará abrir **três terminais independentes**, acessando o container em cada um deles (`docker exec -it arena_ros2_gpu bash`):
 
 ### 1. Terminal 1: Iniciar a Arena (Gazebo + ROS2)
 ```bash
