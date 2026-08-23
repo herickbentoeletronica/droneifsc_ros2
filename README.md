@@ -8,8 +8,8 @@ Repositório oficial para a simulação de veículos aéreos não tripulados (UA
 ---
 
 ## Justificativa de Arquitetura e Hardware
-Este ecossistema em **ROS 2 Humble** foi concebido estrategicamente visando o deploy em hardware real de alto desempenho:
-* **Computação de Bordo (NVIDIA Jetson):** O ecossistema moderno do ROS 2 foi adotado por ser compatível e otimizado para as placas embarcadas NVIDIA Jetson, utilizadas no drone real para processamento pesado de visão computacional, navegação autônoma e inteligência artificial em borda.
+Este ecossistema em **ROS 2 Humble** foi concebido estrategicamente visando a paridade com o hardware real e a segurança no processo de homologação:
+* **Validação e Aproximação com o Ambiente Real (NVIDIA Jetson):** Embora a simulação execute em ambiente computacional hospedeiro, a adoção do ROS 2 assegura total compatibilidade futura com as placas embarcadas NVIDIA Jetson que equiparão o drone real. Isso garante segurança arquitetural, facilidade de deploy e alinhamento direto com a stack de processamento de visão computacional e inteligência artificial em borda da plataforma.
 
 ---
 
@@ -17,7 +17,7 @@ Este ecossistema em **ROS 2 Humble** foi concebido estrategicamente visando o de
 Este ecossistema foi migrado para uma estrutura conteinerizada via Docker, garantindo portabilidade total e isolamento de dependências. O projeto divide-se em:
 * **Física e Mundo (Gazebo):** Simulação tridimensional do labirinto confinado e do drone com sensores de câmera.
 * **Cérebro de Voo (ArduPilot SITL & MAVProxy):** Controladora de voo virtual que processa a dinâmica do veículo e aceita comandos de navegação.
-* **Ponte de Comunicação (MAVROS):** Tradutor oficial que conecta o ecossistema ArduPilot ao ecossistema ROS2.
+* **Ponte de Comunicação (MAVROS):** Tradutor oficial que conecta o ArduPilot ao ecossistema ROS2.
 
 ---
 
