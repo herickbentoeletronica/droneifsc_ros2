@@ -1,6 +1,6 @@
 # Arena Drone IFSC - ROS2 Humble & ArduPilot SITL
 
-Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, utilizando a arquitetura moderna do ROS2 Humble, Gazebo 11 e o piloto automático ArduPilot SITL.
+Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, utilizando a arquitetura moderna do **ROS2 Humble**, **Gazebo 11** e o piloto automático **ArduPilot SITL**.
 
 ---
 
@@ -79,6 +79,9 @@ ros2 launch droneifsc espacoconfinado.launch.py
 ```
 
 ### Terminal 2: Iniciar o Cérebro do Drone (SITL / MAVProxy)
+Inicie o simulador do ArduPilot.
+
+*Nota técnica:* Ao contrário do ROS 1, no ecossistema ROS2 a inicialização padrão gerencia a comunicação diretamente pelas portas padrão do SITL, dispensando parâmetros manuais adicionais de saída na inicialização:
 ```bash
 export PATH=$PATH:$HOME/ardupilot/Tools/autotest
 cd ~/ardupilot/ArduCopter
