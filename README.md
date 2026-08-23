@@ -1,6 +1,8 @@
 # Arena Drone IFSC - ROS2 Humble & ArduPilot SITL
 
-Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, utilizando a arquitetura moderna do **ROS2 Humble**, **Gazebo 11** e o piloto automático **ArduPilot SITL**.
+> **Destinado à Competição Brasileira de Robótica (CBR) 2026**
+
+Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, desenvolvido para a **Competição Brasileira de Robótica (CBR) 2026**, utilizando a arquitetura moderna do **ROS2 Humble**, **Gazebo 11** e o piloto automático **ArduPilot SITL**.
 
 ---
 
@@ -25,7 +27,7 @@ Este ecossistema foi migrado para uma estrutura conteinerizada via Docker, garan
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/herickbentoeletronica/droneifsc_ros2.git
+git clone https://github.com/herickbentoeletronica/droneifsc_gazebo_ros2.git
 ```
 
 2. **Crie e acesse o container Docker:**
@@ -103,4 +105,4 @@ Para inspecionar os dados da simulação em tempo de execução:
 * **Visualizar imagem da câmera em tempo real:** Utilize o `rviz2` ajustando o *Fixed Frame* para `cam_link`.
 
 ---
-*Desenvolvido pela Equipe DroneIFSC para pesquisa e desenvolvimento em robótica autônoma e sistemas embarcados.*
+*Desenvolvido pela Equipe DroneIFSC para a CBR 2026.*
