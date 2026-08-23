@@ -84,7 +84,6 @@ export PATH=$PATH:$HOME/ardupilot/Tools/autotest
 cd ~/ardupilot/ArduCopter
 sim_vehicle.py -v ArduCopter -f gazebo-iris --console
 ```
-*(Após o carregamento, digite no prompt do MAVProxy para decolar: `mode guided`, depois `arm throttle`, e por fim `takeoff 2`)*.
 
 ### Terminal 3: Conectar a Ponte ROS2 (MAVROS)
 ```bash
