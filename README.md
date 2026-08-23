@@ -15,14 +15,25 @@ Este ecossistema foi migrado para uma estrutura conteinerizada via Docker, garan
 ## Pré-requisitos
 * Sistema operacional compatível com Docker e WSL2.
 * Docker Desktop configurado com suporte a aplicações gráficas.
-* ROS2 Humble Desktop & Gazebo 11 instalados no container.
+* Ter criado uma pasta de workspace (ex: `~/ros2_ws/src`) no seu ambiente host.
 
 ---
 
-## Estrutura de Pastas
-* `launch/`: Scripts de inicialização em Python (`.launch.py`).
-* `worlds/`: Cenários e mapas do Gazebo (`.world`).
-* `models/`: Modelos 3D autossuficientes do labirinto, pisos e do drone (`droneIFSC`).
+## Criação do Ambiente (Docker)
+
+Antes de executar a simulação, é necessário criar o container com a imagem base do ROS2 e espelhar o seu repositório local.
+
+1. **Clone este repositório na sua workspace:**
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone https://github.com/herickbentoeletronica/droneifsc_ros2.git
+```
+
+2. **Crie o container Docker:**
+```bash
+docker run -it -d --name arena_ros2_gpu   --net=host   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   -v ~/.Xauthority:/root/.Xauthority:rw   -v ~/ros2_ws:/root/ros2_ws   osrf/ros:humble-desktop
+```
 
 ---
 
@@ -32,7 +43,7 @@ Para rodar a simulação completa com sucesso, você precisará abrir **três te
 
 ### 1. Terminal 1: Iniciar a Arena (Gazebo + ROS2)
 ```bash
-cd ~/ros2_ws
+cd /root/ros2_ws
 colcon build --packages-select droneifsc
 source install/setup.bash
 ros2 launch droneifsc espacoconfinado.launch.py
