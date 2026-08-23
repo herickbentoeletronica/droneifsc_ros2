@@ -1,4 +1,4 @@
-# Arena Drone IFSC - ROS2 Humble & ArduPilot SITL
+# Arena DroneIFSC - ROS2 Humble & ArduPilot SITL
 
 > **Destinado à Competição Brasileira de Robótica (CBR) 2026**
 
