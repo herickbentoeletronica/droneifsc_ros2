@@ -1,8 +1,15 @@
 # Arena DroneIFSC - ROS2 Humble & ArduPilot SITL
 
-> **Destinado à Competição Brasileira de Robótica (CBR) 2026**
+> Equipe DroneIFSC | IFSC - Campus Florianópolis  
+> Destinado à Competição Brasileira de Robótica (CBR) 2026
 
-Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, desenvolvido para a **Competição Brasileira de Robótica (CBR) 2026**, utilizando a arquitetura moderna do **ROS2 Humble**, **Gazebo 11** e o piloto automático **ArduPilot SITL**.
+Repositório oficial para a simulação de veículos aéreos não tripulados (UAVs) em ambiente de arena em espaço confinado, desenvolvido pela equipe **DroneIFSC** do **IFSC - Campus Florianópolis** para a **Competição Brasileira de Robótica (CBR) 2026**, utilizando a arquitetura moderna do **ROS2 Humble**, **Gazebo 11** e o piloto automático **ArduPilot SITL**.
+
+---
+
+## Justificativa de Arquitetura e Hardware
+Este ecossistema em **ROS 2 Humble** foi concebido estrategicamente visando o deploy em hardware real de alto desempenho:
+* **Computação de Bordo (NVIDIA Jetson):** O ecossistema moderno do ROS 2 foi adotado por ser compatível e otimizado para as placas embarcadas NVIDIA Jetson, utilizadas no drone real para processamento pesado de visão computacional, navegação autônoma e inteligência artificial em borda.
 
 ---
 
@@ -68,7 +75,7 @@ Tools/environment_install/install-prereqs-ubuntu.sh -y
 
 ---
 
-## 3. Como Executar o Projeto
+## 3. Como Executar O Projeto
 
 Para rodar a simulação completa com sucesso, você precisará abrir **três terminais independentes dentro do container** (`docker exec -it arena_ros2 bash`):
 
@@ -105,4 +112,4 @@ Para inspecionar os dados da simulação em tempo de execução:
 * **Visualizar imagem da câmera em tempo real:** Utilize o `rviz2` ajustando o *Fixed Frame* para `cam_link`.
 
 ---
-*Desenvolvido pela Equipe DroneIFSC para a CBR 2026.*
+*Desenvolvido pela Equipe DroneIFSC (IFSC - Campus Florianópolis) para a CBR 2026.*
