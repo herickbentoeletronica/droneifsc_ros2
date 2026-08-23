@@ -32,14 +32,14 @@ git clone https://github.com/herickbentoeletronica/droneifsc_ros2.git
 
 2. **Crie o container Docker:**
 ```bash
-docker run -it -d --name arena_ros2_gpu   --net=host   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   -v ~/.Xauthority:/root/.Xauthority:rw   -v ~/ros2_ws:/root/ros2_ws   osrf/ros:humble-desktop
+docker run -it -d --name arena_ros2   --net=host   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   -v ~/.Xauthority:/root/.Xauthority:rw   -v ~/ros2_ws:/root/ros2_ws   osrf/ros:humble-desktop
 ```
 
 ---
 
 ## Como Executar o Projeto
 
-Para rodar a simulação completa com sucesso, você precisará abrir **três terminais independentes**, acessando o container em cada um deles (`docker exec -it arena_ros2_gpu bash`):
+Para rodar a simulação completa com sucesso, você precisará abrir **três terminais independentes**, acessando o container em cada um deles (`docker exec -it arena_ros2 bash`):
 
 ### 1. Terminal 1: Iniciar a Arena (Gazebo + ROS2)
 ```bash
